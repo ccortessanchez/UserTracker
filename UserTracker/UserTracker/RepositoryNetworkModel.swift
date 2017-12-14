@@ -22,6 +22,7 @@ struct RepositoryNetworkModel {
     
     private func fetchRepositories() -> Driver<[Repository]> {
         return repositoryName
+            .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .flatMapLatest { text in
                 return RxAlamofire
                     .requestJSON(.get, "https://api.github.com/users/\(text)/repos")
@@ -29,6 +30,7 @@ struct RepositoryNetworkModel {
                         return Observable.never()
                 }
             }
+            .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .map { (response,json) -> [Repository] in
                 if let repos = Mapper<Repository>().mapArray(JSONObject: json) {
                     return repos
