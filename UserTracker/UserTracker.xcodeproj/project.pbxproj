@@ -13,6 +13,7 @@
 		0A7E06641FE2BF590076EAE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A7E06631FE2BF590076EAE7 /* Assets.xcassets */; };
 		0A7E06671FE2BF590076EAE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A7E06651FE2BF590076EAE7 /* LaunchScreen.storyboard */; };
 		0AC86F411FE2C61700046326 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC86F401FE2C61700046326 /* Repository.swift */; };
+		0AC86F431FE2C94500046326 /* RepositoryNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC86F421FE2C94500046326 /* RepositoryNetworkModel.swift */; };
 		9040D6F829DD63872BB653A6 /* Pods_UserTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0255C63AB31E448808611C /* Pods_UserTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		0A7E06661FE2BF590076EAE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A7E06681FE2BF590076EAE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AC86F401FE2C61700046326 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		0AC86F421FE2C94500046326 /* RepositoryNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryNetworkModel.swift; sourceTree = "<group>"; };
 		917733D4CEE7AD360E97716C /* Pods-UserTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserTracker/Pods-UserTracker.release.xcconfig"; sourceTree = "<group>"; };
 		DA2255AA935D690CCCC8AE7D /* Pods-UserTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UserTracker/Pods-UserTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		DC0255C63AB31E448808611C /* Pods_UserTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,11 +67,12 @@
 			children = (
 				0A7E065C1FE2BF590076EAE7 /* AppDelegate.swift */,
 				0A7E065E1FE2BF590076EAE7 /* RepositoriesViewController.swift */,
+				0AC86F421FE2C94500046326 /* RepositoryNetworkModel.swift */,
+				0AC86F401FE2C61700046326 /* Repository.swift */,
 				0A7E06601FE2BF590076EAE7 /* Main.storyboard */,
 				0A7E06631FE2BF590076EAE7 /* Assets.xcassets */,
 				0A7E06651FE2BF590076EAE7 /* LaunchScreen.storyboard */,
 				0A7E06681FE2BF590076EAE7 /* Info.plist */,
-				0AC86F401FE2C61700046326 /* Repository.swift */,
 			);
 			path = UserTracker;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			files = (
 				0A7E065F1FE2BF590076EAE7 /* RepositoriesViewController.swift in Sources */,
 				0A7E065D1FE2BF590076EAE7 /* AppDelegate.swift in Sources */,
+				0AC86F431FE2C94500046326 /* RepositoryNetworkModel.swift in Sources */,
 				0AC86F411FE2C61700046326 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
