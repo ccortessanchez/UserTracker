@@ -22,6 +22,10 @@ struct RepositoryNetworkModel {
     
     private func fetchRepositories() -> Driver<[Repository]> {
         return repositoryName
+            .subscribeOn(MainScheduler.instance)
+            .do(onNext: { response in
+                UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            })
             .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .flatMapLatest { text in
                 return RxAlamofire
@@ -38,6 +42,10 @@ struct RepositoryNetworkModel {
                     return []
                 }
             }
+            .subscribeOn(MainScheduler.instance)
+            .do(onNext: { response in
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            })
             .asDriver(onErrorJustReturn: [])
     }
 }
