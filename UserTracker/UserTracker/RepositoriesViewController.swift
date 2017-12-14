@@ -7,20 +7,32 @@
 //
 
 import UIKit
+import ObjectMapper
+import RxAlamofire
+import RxCocoa
+import RxSwift
 
 class RepositoriesViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    var rx_searchBar: Observable<String> {
+        return searchBar.rx.text
+            .filter { $0 != nil }
+            .map { $0! }
+            .filter { $0.count > 0 }
+            .debounce(0.5, scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setupRx()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func setupRx() {
+        
     }
 
 
